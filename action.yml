@@ -191,15 +191,15 @@ runs:
 
         # Option: Remove Docker images
 
-        if [[ ${{ inputs.docker-images }} == 'true' ]]; then
-          BEFORE=$(getAvailableSpace)
+        # if [[ ${{ inputs.docker-images }} == 'true' ]]; then
+          # BEFORE=$(getAvailableSpace)
 
-          sudo docker image prune --all --force || true
+          # sudo docker image prune --all --force || true
 
-          AFTER=$(getAvailableSpace)
-          SAVED=$((AFTER-BEFORE))
-          printSavedSpace $SAVED "Docker images"
-        fi
+          # AFTER=$(getAvailableSpace)
+          # SAVED=$((AFTER-BEFORE))
+          # printSavedSpace $SAVED "Docker images"
+        # fi
 
         # Option: Remove tool cache
         # REF: https://github.com/actions/virtual-environments/issues/2875#issuecomment-1163392159
